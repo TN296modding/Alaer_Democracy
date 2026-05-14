@@ -159,7 +159,6 @@ What should be the major focus of our new curriculum?
 - @vocational_major
 - @trad_major
 - @ed_menu: Do not change the curriculum now.
-- @cancel_advisor_action
 
 # note: education_science is a variable that affects how much education affects economic growth.
 
