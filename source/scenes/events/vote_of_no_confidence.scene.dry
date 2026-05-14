@@ -13,7 +13,6 @@ go-to: vonc_menu
 @vonc_menu
 
 - @try_assuage: Try to assuage our partners.
-- @support_kpd: Could we get the KPD to abstain?
 - @let_it_happen: Let the vote happen.
 
 @try_assuage
@@ -23,7 +22,6 @@ How do we assuage our partners?
 - @give_up_prussia: Give up on leadership of Prussia.
 - @austerity: Enact a massive austerity plan.
 - @resources: Use our resources to reduce dissent within the coalition.
-- @support_kpd: Could we get the KPD to abstain?
 - @let_it_happen: Never mind. Let the vote happen.
 
 @give_up_prussia
