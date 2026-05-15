@@ -66,14 +66,14 @@ Q.unemployed_app = 5;
 Q.unemployed_crem = 1;
 Q.unemployed_napfp = 9;
 
-Q.catholics_cpa = 0;
-Q.catholics_asr = 0;
-Q.catholics_asm = 4;
-Q.catholics_sdp = 7;
-Q.catholics_lpp = 3;
-Q.catholics_app = 10;
-Q.catholics_crem = 70;
-Q.catholics_napfp = 5;
+Q.christians_cpa = 0;
+Q.christians_asr = 0;
+Q.christians_asm = 4;
+Q.christians_sdp = 7;
+Q.christians_lpp = 3;
+Q.christians_app = 10;
+Q.christians_crem = 70;
+Q.christians_napfp = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
