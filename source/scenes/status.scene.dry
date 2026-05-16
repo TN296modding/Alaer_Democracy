@@ -24,53 +24,44 @@ Party position:
 
 Coalition: (Party + Party + ...)
 
-[? if cpa_in_gov : CPA Dissent: [+ coal_dissent : coal_dissent +] ?][? if not cpa_in_gov : The CPA is not in government ?]
+[? if cpa_in_gov : CPA Dissent: [ coal_dissent : coal_dissent ] ?][? if not cpa_in_gov : The CPA is not in government ?]
 
-[? if asr_in_gov : AS-R Dissent: [+ coal_dissent : coal_dissent +] ?][? if not asr_in_gov : The AS-R is not in government ?]
+[? if asr_in_gov : AS-R Dissent: [ coal_dissent : coal_dissent ] ?][? if not asr_in_gov : The AS-R is not in government ?]
 
-[? if asm_in_gov : AS-M Dissent: [+ coal_dissent : coal_dissent +] ?][? if not asm_in_gov : The AS-M is not in government ?]
+[? if asm_in_gov : AS-M Dissent: [ coal_dissent : coal_dissent ] ?][? if not asm_in_gov : The AS-M is not in government ?]
 
-[? if sdp_in_gov : SDP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not sdp_in_gov : The SDP is not in government ?]
+[? if sdp_in_gov : SDP Dissent: [ coal_dissent : coal_dissent ] ?][? if not sdp_in_gov : The SDP is not in government ?]
 
-[? if lpp_in_gov : LPP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not lpp_in_gov : The LPP is not in government ?]
+[? if lpp_in_gov : LPP Dissent: [ coal_dissent : coal_dissent ] ?][? if not lpp_in_gov : The LPP is not in government ?]
 
-[? if app_in_gov : APP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not app_in_gov : The APP is not in government ?]
+[? if app_in_gov : APP Dissent: [ coal_dissent : coal_dissent ] ?][? if not app_in_gov : The APP is not in government ?]
 
-[? if crem_in_gov : CREM Dissent: [+ coal_dissent : coal_dissent +] ?][? if not crem_in_gov : The CREM is not in government ?]
+[? if crem_in_gov : CREM Dissent: [ coal_dissent : coal_dissent ] ?][? if not crem_in_gov : The CREM is not in government ?]
 
-[? if napfp_in_gov : NAPFP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not napfp_in_gov : The NAPFP is not in government ?]
+[? if napfp_in_gov : NAPFP Dissent: [ coal_dissent : coal_dissent ] ?][? if not napfp_in_gov : The NAPFP is not in government ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+Mayor: [+ president +]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Speaker: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
-# 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
-Others: [+ other_r +]%
+CPA: [+ cpa_r +]%
+AS-R: [+ asr_r +]%
+AS-M [+ asm_r +]%
+SDP [+ sdp_r +]%
+LPP [+ lpp_r +]%
+APP [+ app_r +]%
+CREM [+ crem_r +]%
+NAPFP: [+ napfp_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+Next election: Motnt : [+ next_election_month +], Year: [+ next_election_year +]
 
 = Economics
 
@@ -254,12 +245,12 @@ Navy: [+ navy_strength +] thousand troops
 Navy Loyalty: [+ navy_loyalty : loyalty +]
 
 Ships
-[+ +] Submarines
-[+ +] Destroyers
-[+ +] Cruisers
-[+ +] Battleships
-[+ +] Mega-Battleships
-[+ +] Aircraft Carriers
+[+ navy_sub_amnt +] Submarines
+[+ navy_des_amnt +] Destroyers
+[+ navy_cru_amnt +] Cruisers
+[+ nav_bat_amnt +] Battleships
+[+ nav_sbt_amnt +] Mega-Battleships
+[+ nav_air_amnt +] Aircraft Carriers
 
 Navy Branches: [+ navy_branch_amount +]
 
@@ -272,13 +263,13 @@ Air Force: [+ air_strength +] thousand pilots
 Air Force Loyalty: [+ air_loyalty : loyalty +]
 
 Planes
-[+ bombers +] Bombers - Skill: [+ bom_skill : skill +]
-[+ cas +] Close Air Support - Skill: [+ cas_skill : skill +]
-[+ fighters +] Fighters - Skill: [+ figh_skill : skill +]
-[+ mult_pur +] Multi-purpose - Skill: [+ mult_skill : skill +]
-[+ navbom +] Naval Bombers - Skill: [+ navbom_skill : skill +]
-[+ navcas +] Naval Close Air Support - Skill [+ navcas_skill : skill +]
-[+ navfigh +] Naval Fighters - Skill [+ navfigh_skill : skill +]
+[+ bombers +] Bombers - Skill: [ bom_skill : skill ]
+[+ cas +] Close Air Support - Skill: [ cas_skill : skill ]
+[+ fighters +] Fighters - Skill: [ figh_skill : skill ]
+[+ mult_pur +] Multi-purpose - Skill: [ mult_skill : skill ]
+[+ navbom +] Naval Bombers - Skill: [ navbom_skill : skill ]
+[+ navcas +] Naval Close Air Support - Skill [ navcas_skill : skill ]
+[+ navfigh +] Naval Fighters - Skill [ navfigh_skill : skill ]
 
 Air Force Branches: [+ air_branch_amount +]
 
