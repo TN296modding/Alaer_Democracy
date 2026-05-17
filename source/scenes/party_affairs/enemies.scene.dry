@@ -13,12 +13,42 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
-- @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
+- @far_left: The Far-Left - The CPA and AS-R
+- @left: The Left - The CPA, AS-R, and AS-M
+- @centre-left: The entirety of the Left - The CPA, AS-R, AS-M, and SDP
+- @centre: The Centrist parties - The SDP, LPP, and APP
+- @bourgeois: The Capitalist parties - The LPP and APP
+- @conservative: The Christian parties - The APP and CREM
+- @right: The Right - The APP, CREM, and NAPFP
+- @far_right: The Far-Right: The CREM and NAPFP
+- @napfp_alone: The NAPFP alone
+- @cpa_alone: The CPA alone
+- @anti_dem: THe CPA and NAPFP
 - @easy_discard
+
+@far_left
+
+text
+
+@left
+
+text
+
+@centre-left
+
+text
+
+@centre
+
+text
+
+@conservative
+
+text
+
+@right
+
+text
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
@@ -30,12 +60,12 @@ on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; worker
 
 Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 
-@nsdap
+@napfp_alone
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
-@kpd
+@cpa_alone
 on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
 
 Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
