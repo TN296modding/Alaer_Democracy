@@ -254,44 +254,96 @@ if (Q.month_actions >= 1) {
 
     ///////////////////////////// change party support based on pro_republic
     // if pro_republic is less than the support of the Weimar coalition, reduce Democratic party support... ASM takes 10% of the hit, SDP takes 20%, LPP takes 50%, APP takes 10%, CREM takes 10%
+<<<<<<< HEAD
+    if (Q.pro_republic < (Q.asm_votes + Q.sdp_votes + Q.lpp_votes + Q.app_votes + Q.crem_votes) {
+=======
     if (Q.pro_republic < (Q.asm_votes + Q.sdp_votes + Q.lpp_votes + Q.app_votes + Q.crem_votes)) 
+>>>>>>> 27c3458097fc5370b0ee0875106f3a17c27b1bfb
         if (Q.middle_asm > 0) {
             Q.middle_asm -= 3/10/12;
             Q.middle_cpa += 1/10/12;
             Q.middle_napfp += 2/10/12;
         }
-        if (Q.old_middle_asm > 0) {
+        if (Q.business_asm > 0) {
             Q.business_asm -= 3/10/12;
-            Q.old_middle_nsdap += 3/10/12;
+            Q.business_napfp += 3/10/12;
         }
         if (Q.rural_asm > 0) {
             Q.rural_asm -= 3/10/12;
             Q.middle_cpa += 2/10/12;
             Q.rural_napfp += 1/10/12;
         }
-        if (Q.workers_spd_normalized > 30) {
+        if (Q.workers_asm_normalized > 35) {
             Q.workers_asm -= 4/10/12;
             Q.workers_cpa += 3/10/12;
             Q.workers_napfp += 1/10/12
         }
-        if (Q.catholics_spd > 0) {
-            Q.catholics_spd -= 4/12;
+        if (Q.christians_asm > 0) {
+            Q.christians_asm -= 4/10/12;
+            Q.christians_cpa += 2/10/12;
+            Q.christians_napfp += 2/10/12;
         }
-        if (Q.unemployed_spd_normalized > 10) {
-            Q.unemployed_spd -= 4/12;
+        if (Q.unemployed_asm_normalized > 10) {
+            Q.unemployed_asm -= 4/10/12;
+            Q.unemployed_cpa += 2/10/12;
         }
-        if (Q.new_middle_ddp > 0) {
-            Q.new_middle_ddp -= 4/12;
-            Q.new_middle_nsdap += 3/12;
+        if (Q.middle_sdp > 3) {
+            Q.middle_sdp -= 3/10/12;
+            Q.middle_cpa += 1/10/12;
+            Q.middle_napfp += 2/10/12;
         }
-        if (Q.old_middle_ddp > 0) {
-            Q.old_middle_ddp -= 5/12;
-            Q.old_middle_nsdap += 4/12;
+        if (Q.business_sdp > 1) {
+            Q.business_sdp -= 3/10/12;
+            Q.business_napfp += 3/10/12;
         }
-        if (Q.rural_ddp > 0) {
-            Q.rural_ddp -= 5/12;
-            Q.rural_nsdap += 4/12;
+        if (Q.rural_sdp > 3) {
+            Q.rural_sdp -= 3/10/12;
+            Q.middle_cpa += 2/10/12;
+            Q.rural_napfp += 1/10/12;
         }
+        if (Q.workers_sdp_normalized > 30) {
+            Q.workers_sdp -= 4/10/12;
+            Q.workers_cpa += 3/10/12;
+            Q.workers_napfp += 1/10/12
+        }
+        if (Q.christians_sdp > 3) {
+            Q.christians_sdp -= 4/10/12;
+            Q.christians_cpa += 2/10/12;
+            Q.christians_napfp += 2/10/12;
+        }
+        if (Q.unemployed_sdp_normalized > 10) {
+            Q.unemployed_sdp -= 4/10/12;
+            Q.unemployed_cpa += 2/10/12;
+        }
+        if (Q.middle_lpp > 50) {
+            Q.middle_lpp -= 3/10/12;
+            Q.middle_cpa += 1/10/12;
+            Q.middle_napfp += 2/10/12;
+        }
+        if (Q.business_lpp > 40) {
+            Q.business_lpp -= 3/10/12;
+            Q.business_napfp += 3/10/12;
+        }
+        if (Q.rural_lpp > 20) {
+            Q.rural_lpp -= 3/10/12;
+            Q.middle_cpa += 2/10/12;
+            Q.rural_napfp += 1/10/12;
+        }
+        if (Q.workers_lpp_normalized > 30) {
+            Q.workers_lpp -= 4/10/12;
+            Q.workers_cpa += 3/10/12;
+            Q.workers_napfp += 1/10/12
+        }
+        if (Q.christians_lpp > 15) {
+            Q.christians_lpp -= 4/10/12;
+            Q.christians_cpa += 2/10/12;
+            Q.christians_napfp += 2/10/12;
+        }
+        if (Q.unemployed_lpp_normalized > 20) {
+            Q.unemployed_lpp -= 4/10/12;
+            Q.unemployed_cpa += 2/10/12;
+        }
+     
     }
 
     ////////////////////////// annual support changes
