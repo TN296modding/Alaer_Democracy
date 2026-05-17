@@ -24,64 +24,75 @@ In our media and campaign materials, who should we consider as our main opponent
 - @far_right: The Far-Right: The CREM and NAPFP
 - @napfp_alone: The NAPFP alone
 - @cpa_alone: The CPA alone
-- @anti_dem: THe CPA and NAPFP
+- @anti_dem: The Anti-Democratic parties - The CPA and NAPFP
 - @easy_discard
 
 @far_left
 choose-if: party != "CPA" and party != "AS-R" and (party != "AS-M" and (left_strength + cenleft_strength + cenright_strength) > right_strength)
+on-arrival: enemies = "CPA and AS-R"
 
 text
 
 @left
 choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "SDP"
+on-arrival: enemies = "CPA, AS-R, and AS-M"
 
 text
 
 @centre-left
 choose-if: (party != "AS-R" and (right_strength + cenleft_strength + cenright_strength) > left_strength) and party != "AS-M" and party != "SDP" and (party != "LPP" and (left_strength + cenleft_strength + cenright_strength) > right_strength)
+on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"
 
 text
 
+@true_cenleft
+choose-if: party != "AS-R" and party != "AS-M" and party != "SDP"
+on-arrival: enemies = "AS-M and SDP"
+
 @centre
 choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
+on-arrival: enemies = "SDP, LPP, and APP"
 
 text
 
 @conservative
 choose-if: party != "APP" and party != "CREM"
+on-arrival: enemies = "APP and CREM"
 
 text
 
 @right
 choose-if: party != "APP" party != "CREM" party != "NAPFP"
+on-arrival: enemies = "APP, CREM, and NAPFP"
 
 text
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+choose-if: party != "CPA" and party != "NAPFP"
+on-arrival: enemies = "CPA and NAPFP"
 
 Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
 
 @far_right
-party != "CREM" and party != "NAPFP"
-on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
+choose-if: party != "CREM" and party != "NAPFP"
+on-arrival: enemies = "CREM and NAPFP"
 
 Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 
 @napfp_alone
 party != "NAPFP"
-on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
+on-arrival: enemies = "NAPFP"
 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
 @cpa_alone
 choose-if: party != "CPA"
-on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
+on-arrival: enemies = "CPA"
 
 Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
 
 @bourgeois
 choose-if: party != "LPP" and party != "APP
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+on-arrival: enemies = "LPP and APP"
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
