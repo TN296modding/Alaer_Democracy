@@ -62,7 +62,7 @@ on-arrival: enemies = "APP and CREM"
 text
 
 @right
-choose-if: party != "APP" party != "CREM" party != "NAPFP"
+choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "APP, CREM, and NAPFP"
 
 text
