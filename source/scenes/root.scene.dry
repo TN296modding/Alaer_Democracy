@@ -226,10 +226,9 @@ Q.rural = 26;
 Q.unemployed = 1.2;
 Q.christians = 30;
 
-
 !}
 
-wip
+- @main
 
 @start4
 choose-if: never
