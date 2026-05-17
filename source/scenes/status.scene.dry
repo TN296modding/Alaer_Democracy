@@ -149,7 +149,7 @@ NAPFP: [+ napfp_relation : relationships +]
 
 [? if party == "SDP" : Left Non-Marxist Social Democracy ?]
 
-[? if party == "SDP" : Trade Unionism ?
+[? if party == "SDP" : Trade Unionism ?]
 
 [? if party == "SDP" : Social Democracy ?]
 
