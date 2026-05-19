@@ -37,7 +37,7 @@ We have declared the CPA and the AS-R as our main enemies in our campaigns [? if
 @left
 choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "SDP"
 on-arrival: enemies = "CPA, AS-R, and AS-M"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 2; middle_asm -= 1; rural_asm -= 1;
-[? if party == "CPA" or party == "AS-R" or party == "AS-M : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
+unavailable-subtitle: [? if party == "CPA" or party == "AS-R" or party == "AS-M : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
 
 We have declared the Communist-Socialist parties to be our main enemies in campagining. [? if party == "LPP" or party == "APP" : This will make it harder to form coalitions with co-operative parties like the AS-R ?]
 
