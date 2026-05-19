@@ -37,7 +37,7 @@ We have declared the CPA and the AS-R as our main enemies in our campaigns [? if
 @left
 choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "SDP"
 on-arrival: enemies = "CPA, AS-R, and AS-M"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 2; middle_asm -= 1; rural_asm -= 1;
-unavailable-subtitle: [? if party == "CPA" or party == "AS-R" or party == "AS-M : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
+unavailable-subtitle: [? if party == "CPA" or party == "AS-R" or party == "AS-M" : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
 
 We have declared the Communist-Socialist parties to be our main enemies in campagining. [? if party == "LPP" or party == "APP" : This will make it harder to form coalitions with co-operative parties like the AS-R ?]
 
@@ -58,7 +58,7 @@ We have declared specifically the centre left to be our enemies [? if party == "
 @centre
 choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
 on-arrival: enemies = "SDP, LPP, and APP"; workers_sdp -= 3; middle_lpp -= 1; business_app -= 3; moderate_support -= 2
-unavailable-subtitle: [? if party == "SDP" or party == "LPP" or party == "APP: : Why would we attack ourselves? ?][? if party == "AS-M" : Why would we attack our allies? ?]
+unavailable-subtitle: [? if party == "SDP" or party == "LPP" or party == "APP": : Why would we attack ourselves? ?][? if party == "AS-M" : Why would we attack our allies? ?]
 
 We have declared the centre parties to be our enemies. [? if party != "NAPFP" : This will make it harder to build coalitions with these parties ?]
 
@@ -102,11 +102,11 @@ choose-if: party != "CPA"
 on-arrival: enemies = "CPA"; workers_cpa -= 4; rural_cpa -= 2; unemployed_cpa -= 2
 unavailable-subtitle: [? if party == "CPA" : Why would we attack ourselves? ?]
 
-Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
+Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the CPA, this may not be the best choice.
 
 @bourgeois
 choose-if: party != "LPP" and party != "APP" and party != "CREM" and party != "SDP"
 on-arrival: enemies = "LPP and APP"; middle_lpp -= 3; business_app -= 3; moderate_support -= 2;
-unavailable-subtitle: [? if party == "LPP" or partyy == "APP" : Why would we attakc ourselves? ?][? if party == "SDP" or party == "CREM" : Why would we attack our allies? ?]
+unavailable-subtitle: [? if party == "LPP" or party == "APP" : Why would we attack ourselves? ?][? if party == "SDP" or party == "CREM" : Why would we attack our allies? ?]
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
