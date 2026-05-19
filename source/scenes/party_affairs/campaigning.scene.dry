@@ -26,7 +26,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: workers_cpa += 1.1*(1-dissent) if party == "CPA"; workers_asr += 1.5*(1-dissent) if party == "AS-R"; workers_asm += 2.5*(1-dissent) if party == "AS-M"; workers_sdp += 4*(1-dissent) if party == "SDP"; workers_lpp += 0.5*(1-dissent) if party == "LPP"; workers_app += 1.5*(1-dissent) if party == "APP"; christians_crem += 0.9*(1-dissent) if party == "CREM"; workers_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
 
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract workers. ?]
+We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if economic_plan = 1 : Adopting the [+ economic_plan_name +] plan gives us a new rallying point around which to attract workers. ?][? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : As a party of the workers, we have an easier time appealing to this social group ?]
 
 @middle
 subtitle: -1 resources
@@ -48,9 +48,9 @@ We have increased our campaigning among the old middle class. [? if nationalism 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_cpa += 1*(1-dissent) if party == "CPA"; rural_asr += 1*(1-dissent) if party == "AS-R"; rural_asm += 2*(1-dissent) if party == "AS-M"; rural_sdp += 2*(1-dissent) if party == "SDP"; rural_lpp += 0.75*(1-dissent) if party == "LPP"; rural_app += 2*(1-dissent) if party == "APP"; rural_crem += 4*(1-dissent) if party == "CREM"; rural_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
+on-arrival: rural_cpa += 1*(1-dissent) if party == "CPA"; rural_asr += 2*(1-dissent) if party == "AS-R"; rural_asr += 0.5 if party == "AS-R" and rural_asr_crem_welfare_timer > 0; rural_asm += 1*(1-dissent) if party == "AS-M"; rural_sdp += 2*(1-dissent) if party == "SDP"; rural_lpp += 0.75*(1-dissent) if party == "LPP"; rural_app += 2*(1-dissent) if party == "APP"; rural_crem += 4*(1-dissent) if party == "CREM"; rural_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
 
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+We have increased our campaigning among farmers. [? if party == "LPP" or party == "AS-M" or party == "CPA" or party == "NAPFP": We have not historically campaigned much among the farmers, and they do not trust us. ?][? if party == "APP" or party == "AS-R" or party == "CREM" : As a rural party, we have an easier time increasing support among farmers than other parties. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
 
 @unemployed
 subtitle: -1 resources
