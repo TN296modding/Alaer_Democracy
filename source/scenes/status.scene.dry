@@ -207,26 +207,22 @@ if (Q.wla_strength) {
     Q.wla_strenth_2 = 0;
     Q.wla_strength_2 += Q.wla_strength.toFixed(1);
     Q.wla_strength_2 += Q.ywl_strength.toFixed(1);
-    Q.wla_strength_2 = Q.wla_strength_2.toFixed(1);
 }
 if (Q.pf_strength) {
     Q.pf_strength_2 = 0;
     Q.pf_strength_2 += Q.pf_strength.toFixed(1);
     Q.pf_strength_2 += Q.cag_strength.toFixed(1);
-    Q.pf_strength_2 = Q.pf_strength_2.toFixed(1);
 }
 if (Q.acl_strength) {
     Q.acl_strength_2 = 0;
     Q.acl_strength_2 += Q.acl_strength.toFixed(1);
     Q.acl_strength_2 += Q.ccf_strength.toFixed(1);
-    Q.acl_strength_2 = Q.acl_strength_2.toFixed(1);
 }
 if (Q.al_strength) {
     Q.al_strength_2 = 0;
     Q.al_strength_2 += Q.al_strength.toFixed(1);
     Q.al_strength_2 += Q.yn_strength.toFixed(1);
     Q.al_strength_2 += Q.wnl_strength.toFixed(1);
-    Q.al_strength_2 = Q.al_strength_2.toFixed(1);
 }
 if (Q.wla_militancy) {
     Q.wla_militancy_2 = 0;

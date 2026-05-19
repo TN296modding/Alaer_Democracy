@@ -104,19 +104,26 @@ Q.napfp_r = 4;
 
 Q.wla_strength = 0.5;
 Q.ywl_strength = 0.75;
+
 Q.pf_strength = 6;
 Q.cag_strength = 1;
+
 Q.acl_strength = 4;
 Q.ccf_strength = 4;
+
 Q.al_strength = 1;
 Q.wnl_strength = 1;
 Q.yn_strength = 1;
+
 Q.wla_militancy = 0.5;
 Q.ywl_militancy = 0.3;
+
 Q.cag_militancy = 0;
 Q.pf_militancy = 0.15;
+
 Q.ccf_militancy = 0.1;
 Q.acl_militancy = 0.1;
+
 Q.yn_militancy = 0.5;
 Q.wnl_militancy = 0.4;
 Q.al_militancy = 0.7;
