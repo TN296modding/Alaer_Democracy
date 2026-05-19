@@ -153,7 +153,7 @@ Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 [? if party == "SDP" : Social Democracy ?]
 
-[? if party == "SDP" : Social Liberal ?]
+[? if party == "SDP" : Social Liberalism ?]
 
 [? if party == "SDP" and sdp_special_faction : Green Social Democracy ?]
 
