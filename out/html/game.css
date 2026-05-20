@@ -607,7 +607,7 @@ table {
     font-family: "Minion Pro", Georgia, serif;
     background-color: var(--tab-color);
     color: var(--text-color);
-    border: none;
+    border: 3px blue;
     outline: 5px darkblue;
     outline-offset: 4px;
 }
